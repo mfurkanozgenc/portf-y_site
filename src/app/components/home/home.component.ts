@@ -50,7 +50,6 @@ export class HomeComponent {
 
   isElementInViewport(element: any) {
     const rect = element.getBoundingClientRect();
-    console.log("GELEN",rect);
     return (
       rect.top >= 0 &&
       rect.left >= 0 &&
