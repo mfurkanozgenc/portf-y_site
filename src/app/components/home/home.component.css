@@ -57,7 +57,7 @@ section{
     cursor: pointer;
 }
 .nav_links li span:hover{
-   background: #24CAAC;
+   background: #6a6a6a;
 }
 .selected{
   background: #24CAAC;
