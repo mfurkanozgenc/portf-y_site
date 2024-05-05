@@ -23,6 +23,14 @@ export class HomeComponent {
 
   }
 
+
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: MouseEvent) {
+    if (this.isOpen && !(event.target as HTMLElement).closest('.navbar')) {
+      this.isOpen = false;
+    }
+  }
+
   @HostListener('window:scroll', ['$event'])
   checkScroll() {
 
@@ -76,4 +84,9 @@ export class HomeComponent {
   toggleMenu() {
     this.isOpen = !this.isOpen;
   }
+
+
+
+
+
 }

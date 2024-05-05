@@ -83,10 +83,11 @@ section{
   .menu-toggle {
     border: none;
     display: block;
-
+    background: rgb(44, 37, 37);
   }
   .menu-toggle i{
     font-size: 25px;
+    color: #fff;
   }
   .nav_links {
     display: none;
