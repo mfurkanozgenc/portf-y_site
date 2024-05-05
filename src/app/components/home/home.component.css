@@ -30,14 +30,16 @@ section{
 
 /* HEADER */
 
-.header{
+.header {
   top: 0;
   background: rgb(44, 37, 37);
   border-bottom: 1px solid rgba(238, 238, 238, 0.801);
   position: fixed;
   width: 100%;
+  z-index: 10;
 }
-.navbar{
+
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -45,28 +47,76 @@ section{
   width: 80%;
   padding: 10px 0;
 }
-.nav_links{
+
+.nav_links {
   display: flex;
 }
-.nav_links li span{
-    margin-left: 15px;
-    color: #fff;
-    padding: 5px 15px;
-    border-radius: 5px;
-    transition: all .5s ease-in-out;
-    cursor: pointer;
+
+.nav_links li span {
+  margin-left: 15px;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 5px;
+  transition: all .5s ease-in-out;
+  cursor: pointer;
 }
-.nav_links li span:hover{
-   background: #6a6a6a;
+
+.nav_links li span:hover {
+  background: #6a6a6a;
 }
-.selected{
+
+.selected {
   background: #24CAAC;
 }
-.logo h2 a{
-  color:#fff;
+
+.logo h2 a {
+  color: #fff;
   text-transform: uppercase;
   cursor: pointer;
 }
+
+.menu-toggle {
+  display: none;
+}
+
+@media only screen and (max-width: 1124px) {
+  .menu-toggle {
+    border: none;
+    display: block;
+
+  }
+  .menu-toggle i{
+    font-size: 25px;
+  }
+  .nav_links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: rgb(44, 37, 37);
+    width: 100%;
+    padding: 10px 0;
+    box-sizing: border-box;
+  }
+
+  .nav_links.open {
+    display: flex;
+  }
+
+  .nav_links li {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .nav_links li span {
+    margin: 0;
+    padding: 10px 0;
+    width: 100%;
+    display: block;
+  }
+}
+
 
 /* ANASAYFA */
 .inner_anasayfa{
@@ -184,7 +234,7 @@ section{
   flex-basis: 40%;
 }
 .child_achivement_left img{
-  border-radius: 5PX;
+  border-radius: 50%;
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -265,6 +315,9 @@ section{
 }
 .child_contact{
   flex-basis: 45%;
+}
+.child_contact img{
+  border-radius: 50%;
 }
 .child_contact form{
   padding: 50px 40px;

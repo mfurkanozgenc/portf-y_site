@@ -59,6 +59,7 @@ export class HomeComponent {
   }
 
   goToSection(sectionId: string) {
+    this.isOpen = false;
     this.selectedMenu = sectionId;
     const section = this.elementRef.nativeElement.querySelector(`#${sectionId}`);
     if (section) {
@@ -68,5 +69,11 @@ export class HomeComponent {
   scrollToTop() {
     this.selectedMenu = 'anasayfa';
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  isOpen: boolean = false;
+
+  toggleMenu() {
+    this.isOpen = !this.isOpen;
   }
 }

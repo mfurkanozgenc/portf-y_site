@@ -6,7 +6,8 @@
         <a (click)="goToSection('anasayfa')">Özgenç</a>
       </h2>
     </div>
-    <ul class="nav_links">
+    <button class="menu-toggle" (click)="toggleMenu()"><i class="fa fa-bars"></i></button>
+    <ul class="nav_links" [ngClass]="{'open': isOpen}">
       <li (click)="goToSection('anasayfa')"><span [ngClass]="{selected: selectedMenu === 'anasayfa'}">ANASAYFA</span></li>
       <li (click)="goToSection('yazilimlar')"><span [ngClass]="{selected: selectedMenu === 'yazilimlar'}">YAZILIMLAR</span></li>
       <li (click)="goToSection('sertifikalar')"><span [ngClass]="{selected: selectedMenu === 'sertifikalar'}">SERTİFİKALAR</span></li>
@@ -14,9 +15,9 @@
       <li (click)="goToSection('hakkimda')"><span [ngClass]="{selected: selectedMenu === 'hakkimda'}">YORUMLAR</span></li>
       <li (click)="goToSection('iletisim')"><span [ngClass]="{selected: selectedMenu === 'iletisim'}">İLETİŞİM</span></li>
     </ul>
-
   </div>
 </div>
+
   <!-- ANASAYFA -->
   <section #anasayfaSection id="anasayfa">
       <div class="inner_anasayfa">
@@ -225,7 +226,7 @@
 <div class="inner_footer">
   <div class="child_footer">
     <h3>Hakkımda</h3>
-    <p>Karadeniz Teknik Übiversitesi Yazılım Mühendisliği Mezunuyum</p>
+    <p>Karadeniz Teknik Üniversitesi Yazılım Mühendisliği Mezunuyum</p>
     <ul class="footer_social">
     <li><a href=""><i class="fab fa-facebook"></i></a></li>
     <li><a href=""><i class="fab fa-twitter"></i></a></li>
@@ -261,7 +262,7 @@
   </div>
 </div>
 </footer>
-<button (click)="scrollToTop()" class="scroll-top-btn">
+<button *ngIf="selectedMenu != 'anaayfa'" (click)="scrollToTop()" class="scroll-top-btn">
   <i class="fas fa-arrow-up"></i>
 </button>
 
