@@ -131,8 +131,11 @@ section{
 .child_anasayfa{
   flex-basis: 45%;
 }
-.child_anasayfa h1{
-  font-size: 50px;
+.child_anasayfa img{
+  border-radius:  50%;
+}
+.child_anasayfa h2{
+  font-size: 30px;
   color : #24CAAC;
 }
 .span_child{
@@ -158,21 +161,21 @@ section{
 }
 /* YAZILIMLAR */
 .inner_software{
+  text-align: center;
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
-  width: 80%;
   justify-content: space-between;
+  align-items: center;
+  width: 80%;
   margin: 0 auto;
 }
 .child_software{
-   flex-basis: 31%;
-   color:#fff;
-   padding: 25px 20px;
-   background: rgba(55, 66, 80, 0.281);
-   border-radius: 5px;
-   border: 1px solid transparent;
-   transition: all 0.5s ease-in;
+  flex-basis: 24%;
+  color: #fff;
+  padding: 20px 10px;
+  border: 1px solid transparent;
+  transition: all 0.3s;
+  border-radius: 5px;
 }
 .child_software:hover{
    border: 1px solid #24CAAC;
@@ -241,7 +244,7 @@ section{
   object-fit: cover;
 }
 .child_achivement_right{
-  flex-basis: 46%;
+  flex-basis: 26%;
   display: flex;
   flex-wrap: wrap;
   text-align: center;
@@ -249,7 +252,7 @@ section{
 }
 .single_detail{
   cursor: pointer;
-  flex-basis: 48%;
+
   padding: 40px 30px;
   color: #fff;
   border-radius: 5px;
@@ -312,11 +315,9 @@ section{
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
-  width: 80%;
+  width: 60%;
 }
-.child_contact{
-  flex-basis: 45%;
-}
+
 .child_contact img{
   border-radius: 50%;
 }
